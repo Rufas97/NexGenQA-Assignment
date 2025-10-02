@@ -108,24 +108,24 @@ public class ValidateModelSummary {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		driver.findElement(By.xpath("//button[text()='Sign in']")).click();
-		driver.findElement(By.xpath("//input[@id='identifier-field']")).sendKeys("rufasborugadda@yahoo.com");
+	   driver.findElement(By.xpath("//input[@id='identifier-field']")).sendKeys("rufasborugadda@yahoo.com");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@data-localization-key='formButtonPrimary']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@id='password-field']")).sendKeys("Rufasrebel@1997");
+		driver.findElement(By.xpath("//input[@id='password-field']")).sendKeys("Rufas@1997");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@data-localization-key='formButtonPrimary']")).click();
 		Thread.sleep(2000);
 	     
 	    WebElement openRouterChatBox= driver.findElement(By.xpath("//div[@class='relative']/div[2]//div/div/textarea"));
 	    openRouterChatBox.click();
-	    Thread.sleep(2000);
-	    openRouterChatBox.sendKeys(rawText);
-	    Thread.sleep(2000);
-	    openRouterChatBox.sendKeys(Keys.ENTER);
-	
+	    Thread.sleep(3000);
+	    //openRouterChatBox.sendKeys(rawText);
+        Thread.sleep(6000);
+        openRouterChatBox.sendKeys(Keys.ENTER);
+        
 	    WebElement modelSummary= driver.findElement(By.xpath("//div[@class='flex flex-col items-start gap-2 w-full']/div/div/div/div"));
-	    Thread.sleep(5000);
+	    Thread.sleep(15000);
 	    String mdSummaryText= modelSummary.getText();
 	    System.out.println(mdSummaryText);
 	    
