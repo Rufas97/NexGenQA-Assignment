@@ -97,7 +97,7 @@ public class ValidateModelSummary {
 			+ "\r\n"
 			+ "Week 7–8: Integration testing and UAT.\r\n"
 			+ "\r\n"
-			+ "Week 9: Deployment and release readiness review.";
+			+ "Week 9: Deployment and release readiness review."  ;
 	
 	
 	public static void main(String[] args) throws InterruptedException {
@@ -112,7 +112,7 @@ public class ValidateModelSummary {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@data-localization-key='formButtonPrimary']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@id='password-field']")).sendKeys("Rufas@1997");
+		driver.findElement(By.xpath("//input[@id='password-field']")).sendKeys("Rufasrebel@1997");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@data-localization-key='formButtonPrimary']")).click();
 		Thread.sleep(2000);
@@ -120,15 +120,14 @@ public class ValidateModelSummary {
 	    WebElement openRouterChatBox= driver.findElement(By.xpath("//div[@class='relative']/div[2]//div/div/textarea"));
 	    openRouterChatBox.click();
 	    Thread.sleep(3000);
-	    //openRouterChatBox.sendKeys(rawText);
-        Thread.sleep(6000);
+	    openRouterChatBox.sendKeys(rawText);
+        Thread.sleep(10000);
         openRouterChatBox.sendKeys(Keys.ENTER);
         
-	    WebElement modelSummary= driver.findElement(By.xpath("//div[@class='flex flex-col items-start gap-2 w-full']/div/div/div/div"));
-	    Thread.sleep(15000);
+	    WebElement modelSummary= driver.findElement(By.xpath("//div[@class='flex flex-col items-start gap-2 w-full']/div/div/div/p"));
+	    Thread.sleep(5000);
 	    String mdSummaryText= modelSummary.getText();
 	    System.out.println(mdSummaryText);
-	    
 	    
 	    driver.quit();
 
